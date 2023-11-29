@@ -66,4 +66,22 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+    //<<<<<<<<<<<<<<<<<<<<<<<Calculate Price>>>>>>>>>>>>>>>>>>
+    @Test
+    public void calculateOrderValue_should_return_the_correct_total() {
+
+    }
+
+    @Test
+    public void calculateOrderValue_with_single_item_should_return_the_correct_total() {
+
+    }
+
+    @Test
+    public void calculateOrderValue_with_no_items_should_return_zero() {
+
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<Calculate Price>>>>>>>>>>>>>>>>>>
 }
