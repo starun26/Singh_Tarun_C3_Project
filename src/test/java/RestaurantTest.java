@@ -2,6 +2,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
+import java.util.*;
+
 
 import java.time.LocalTime;
 
@@ -72,16 +74,22 @@ class RestaurantTest {
     @Test
     public void calculateOrderValue_should_return_the_correct_total() {
 
+        List<String> itemsOrdered = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+        assertEquals(388, restaurant.calculateOrderValue(itemsOrdered));
     }
 
     @Test
     public void calculateOrderValue_with_single_item_should_return_the_correct_total() {
 
+        List<String> itemsOrdered = Collections.singletonList("Sweet corn soup");
+        assertEquals(119, restaurant.calculateOrderValue(itemsOrdered));
     }
 
     @Test
     public void calculateOrderValue_with_no_items_should_return_zero() {
 
+        List<String> itemsOrdered = new ArrayList<>();
+        assertEquals(0, restaurant.calculateOrderValue(itemsOrdered));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<Calculate Price>>>>>>>>>>>>>>>>>>
 }

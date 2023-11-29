@@ -50,8 +50,14 @@ public class Restaurant {
         menu.remove(itemToBeRemoved);
     }
 
-    public void calculateOrderValue(List<String> itemNames) {
-        //Price calculation needs to be implemented
+    public int calculateOrderValue(List<String> itemNames) {
+        int orderValue = 0;
+
+        for (String itemName : itemNames) {
+            Item item = findItemByName(itemName);
+            orderValue += item.getPrice();
+        }
+        return orderValue;
     }
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
